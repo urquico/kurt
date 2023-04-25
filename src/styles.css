@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "radioheadFont";
+  src: local("radioheadFont"), url(./assets/BD_Plakatbau.otf);
+}
+
+@font-face {
+  font-family: "theCureFont";
+  src: local("theCureFont") url(./assets/CureCuriosity-dreZ.ttf);
+}
+
+@font-face {
+  font-family: "nirvanaFont";
+  src: local("nirvanaFont") url(./assets/NIRVANA.TTF);
+}
+
+.radiohead {
+  font-family: "radioheadFont", sans-serif;
+  font-size: 2rem;
+}
+
+.joyDivision {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.5rem;
+}
+
+.theCure {
+  font-family: "theCureFont", sans-serif;
+  font-size: 1.5rem;
+}
+
+.nirvana {
+  font-family: "nirvanaFont", sans-serif;
+  font-size: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
