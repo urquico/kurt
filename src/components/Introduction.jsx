@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Text, useMantineColorScheme, Code, Box } from "@mantine/core";
+import { Text, useMantineColorScheme, Code } from "@mantine/core";
 import { useViewportSize, useMouse, useMove } from "@mantine/hooks";
 
 import SecretWords from "./SecretWords";
@@ -21,8 +21,6 @@ function Introduction() {
     setCoordinates({ x: x / width, y: y / height });
   }, [x, y, height, width]);
 
-  console.log(active);
-
   return (
     <>
       <div
@@ -40,29 +38,6 @@ function Introduction() {
           pointerEvents: "none",
         }}
       ></div>
-      {/* <div
-        style={{
-          position: "absolute",
-          width: "100vw",
-          height: "100vh",
-          overflow: "hidden",
-        }}
-      >
-        <hr
-          style={{
-            position: "absolute",
-            height: y - 20,
-            width: x - 20,
-            top: "2%",
-            left: "1.5%",
-            // color: "black ",
-            // color: colorScheme === "dark" ? "black" : "#151716",
-            // width: "0.010rem",
-            transform: `rotate(-45deg) translate(0%, 90%) skew(${x}deg, ${y}deg)`,
-            // display: localStorage.getItem("path") ? "none" : "",
-          }}
-        />
-      </div> */}
       <div
         style={{
           display: "flex",
