@@ -34,7 +34,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.7rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -43,7 +43,6 @@
 
 ::-webkit-scrollbar-thumb {
   background: orange;
-  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -52,4 +51,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.text-nav {
+  cursor: pointer;
+}
+
+.text-nav:hover {
+  text-decoration: line-through;
 }

@@ -7,23 +7,36 @@ import allApologies from "../src/assets/allApologies.mp3";
 export const works = [
   {
     link: "https://haribon-e-wall.web.app/",
-    thumbnail:
-      "https://lh3.googleusercontent.com/-1BahR5iloY2MO1PUawD9RE28fApl7UhJF3i9J0ihb5NH6vF5R4nZq1_Ncyi3ARG_q5hMQmppwmQqqcIPx37WJBs7r_7v9f3xggr_0Q2JO_MRyRaceBg3Wx6NfZqjvLvbUFz4AoQJQ=w2400",
+    thumbnail: "../src/assets/rubikscubePsych.avif",
     title: "Haribon E-Wall (Grievance Forum)",
     description:
-      "A project for software engineering 1 in Pamantasan ng Lungsod ng Maynila",
-    tech: "FERN Stack with REST Web Server",
+      "A project for software engineering in \nPamantasan ng Lungsod ng Maynila",
+    tech: ["Firebase", "REST", "React", "Node"],
     githubLink: "",
+    speed: 30,
+    status: "deployed",
   },
   {
-    link: "https://haribon-e-wall.web.app/",
-    thumbnail:
-      "https://lh3.googleusercontent.com/-1BahR5iloY2MO1PUawD9RE28fApl7UhJF3i9J0ihb5NH6vF5R4nZq1_Ncyi3ARG_q5hMQmppwmQqqcIPx37WJBs7r_7v9f3xggr_0Q2JO_MRyRaceBg3Wx6NfZqjvLvbUFz4AoQJQ=w2400",
-    title: "Haribon E-Wall (Grievance Forum)",
+    link: "https://urquico.github.io/monte-carlo/",
+    thumbnail: "../src/assets/rubikscubePsych.avif",
+    title: "Monte Carlo Simulation",
     description:
-      "A project for software engineering 1 in Pamantasan ng Lungsod ng Maynila",
-    tech: "FERN Stack with REST Web Server",
-    githubLink: "",
+      "An activity for computational science in \nPamantasan ng Lungsod ng Maynila",
+    tech: ["Vite", "React"],
+    githubLink: "https://github.com/urquico/monte-carlo",
+    speed: 50,
+    status: "deployed",
+  },
+  {
+    link: "https://urquico.github.io/word-buggle/",
+    thumbnail: "../src/assets/rubikscubePsych.avif",
+    title: "Word Buggle",
+    description:
+      "A Project for computational science in \nPamantasan ng Lungsod ng Maynila",
+    tech: ["Vite", "React"],
+    githubLink: "https://github.com/urquico/word-buggle",
+    speed: 50,
+    status: "deployed",
   },
 ];
 
@@ -62,3 +75,5 @@ export const secretWordsData = [
     toolTipMessage: "playing: All Apologies",
   },
 ];
+
+export const photo = ["../src/assets/sultan.jpeg", "../src/assets/black.png"];

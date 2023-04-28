@@ -40,7 +40,7 @@ function DarkMode() {
     <>
       <Tooltip
         label={
-          dark ? "click to turn off the lights" : "click to turn on the lights"
+          dark ? "click to turn on the lights" : "click to turn off the lights"
         }
         style={{ display: isHidden ? "none" : "show" }}
       >

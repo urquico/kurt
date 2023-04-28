@@ -1,12 +1,24 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Text, useMantineColorScheme, Code } from "@mantine/core";
+import {
+  Text,
+  useMantineColorScheme,
+  Button,
+  Center,
+  SimpleGrid,
+} from "@mantine/core";
 import { useViewportSize, useMouse, useMove } from "@mantine/hooks";
+import { TypeAnimation } from "react-type-animation";
+import {
+  IconBrandLinkedin,
+  IconLayersLinked,
+  IconBrandGithub,
+} from "@tabler/icons-react";
 
 import SecretWords from "./SecretWords";
 import { secretWordsData } from "../workdata";
 
-function Introduction() {
+function Introduction({ introduction }) {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
@@ -22,7 +34,7 @@ function Introduction() {
   }, [x, y, height, width]);
 
   return (
-    <>
+    <div ref={introduction}>
       <div
         ref={ref}
         style={{
@@ -70,7 +82,7 @@ function Introduction() {
             >
               {"Hi! I'm"}
             </Text>
-            KURT JACOB E. URQUICO
+            KURT JACOB URQUICO
           </Text>
           <motion.div
             initial={{ opacity: 0 }}
@@ -81,14 +93,71 @@ function Introduction() {
               style={{ marginTop: "-1rem" }}
               ta={isMobileView ? "" : "center"}
             >
-              <Code color="black">
-                student | programmer | developer | cuber | musician
-              </Code>
-            </Text>
-            <Text style={{ marginTop: "0" }} ta={isMobileView ? "" : "center"}>
-              <Code>{`{ x: ${x}, y: ${y} }`}</Code>
+              <TypeAnimation
+                sequence={[
+                  "$ ",
+                  1000,
+                  "$ student",
+                  1000,
+                  "$ programmer",
+                  1000,
+                  "$ cuber",
+                  1000,
+                  "$ developer",
+                  1000,
+                  "$ musician",
+                  1000,
+                ]}
+                speed={20}
+                repeat={Infinity}
+              />
             </Text>
           </motion.div>
+          <Center style={{ marginTop: "2rem" }}>
+            <SimpleGrid
+              style={{ display: "flex" }}
+              breakpoints={[
+                { minWidth: "sm", cols: 2 },
+                { minWidth: "md", cols: 3 },
+                { minWidth: 1200, cols: 4 },
+              ]}
+            >
+              <Button
+                variant="subtle"
+                color={dark ? "gray" : "dark"}
+                className="text-nav links-out"
+                onClick={() => window.open("https://read.cv/urquico", "_blank")}
+                leftIcon={<IconLayersLinked size="1rem" />}
+              >
+                Resume
+              </Button>
+              <Button
+                variant="subtle"
+                color={dark ? "gray" : "dark"}
+                className="text-nav links-out"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/kurturquico/",
+                    "_blank"
+                  )
+                }
+                leftIcon={<IconBrandLinkedin size="1rem" />}
+              >
+                LinkedIn
+              </Button>
+              <Button
+                variant="subtle"
+                color={dark ? "gray" : "dark"}
+                className="text-nav links-out"
+                onClick={() =>
+                  window.open("https://github.com/urquico", "_blank")
+                }
+                leftIcon={<IconBrandGithub size="1rem" />}
+              >
+                GitHub
+              </Button>
+            </SimpleGrid>
+          </Center>
         </motion.div>
 
         {secretWordsData.map((secret) => {
@@ -106,7 +175,7 @@ function Introduction() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 
