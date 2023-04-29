@@ -31,6 +31,7 @@ function SecretWords({ word, x, y, audioFile, uniqueClass, toolTipMessage }) {
         padding: "1rem",
         paddingBottom: "1.0rem",
         color: dark ? "black" : "#151716",
+        zIndex: "999",
       }}
     >
       <Tooltip label={toolTipMessage}>
