@@ -15,6 +15,7 @@ export const works = [
     githubLink: "",
     speed: 50,
     status: "on-going",
+    projectSpecs: "https://read.cv/urquico/YmlSFfybOhxeV8J4mWg7",
   },
   {
     link: "https://haribon-e-wall.web.app/",
@@ -24,9 +25,10 @@ export const works = [
     description:
       "A project for software engineering in \nPamantasan ng Lungsod ng Maynila",
     tech: ["Firebase", "REST", "React", "Node"],
-    githubLink: "",
+    githubLink: "https://github.com/urquico/grievance-forum",
     speed: 30,
     status: "deployed",
+    projectSpecs: "https://read.cv/urquico/4GIzKau0H2FNbZYn8AZz",
   },
   {
     link: "https://urquico.github.io/monte-carlo/",
@@ -39,6 +41,7 @@ export const works = [
     githubLink: "https://github.com/urquico/monte-carlo",
     speed: 50,
     status: "deployed",
+    projectSpecs: "",
   },
   {
     link: "https://urquico.github.io/word-buggle/",
@@ -51,6 +54,7 @@ export const works = [
     githubLink: "https://github.com/urquico/word-buggle",
     speed: 10,
     status: "deployed",
+    projectSpecs: "",
   },
 ];
 
@@ -90,4 +94,26 @@ export const secretWordsData = [
   },
 ];
 
-export const photo = ["../src/assets/sultan.jpeg", "../src/assets/black.png"];
+export const photo = [
+  "https://lh3.googleusercontent.com/RdrSY40BKL6b7917XiteqpK94LUBOWQAwLBrpSOE2Neahi1RkBhFzoES2zu9FbZEYOavbKaXCUySbTJRps427REE5kmfVuzYHzQEGhihOZOs80V3hRafySIvikrlUazW2sQurJ5TAw=w2400",
+  "https://lh3.googleusercontent.com/2626VVwKwozPbGOcI4nXc-oafKSZvCuhew_YsOg-TqM0M9F4r393Bi49AhWo8qSSRgcyGLSWX2iu4r1KcLM4GN3GF63BZFVfptPL13-I24SnXI05ayoah5mwNkNQtYH8gc7YyY_WvQ=w2400",
+];
+
+export const skillsData = [
+  { label: "React JS" },
+  { label: "Node JS" },
+  { label: "Express JS" },
+  { label: "Firebase" },
+  { label: "MySQL" },
+  { label: "Electron" },
+  { label: "Vite" },
+  { label: "Mantine UI" },
+  { label: "REST" },
+  { label: "C, C++" },
+  { label: "HTML | CSS" },
+  { label: "Python" },
+  { label: "Java" },
+  { label: "HTML" },
+  { label: "CSS" },
+  { label: "JavaScript" },
+];

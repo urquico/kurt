@@ -61,3 +61,13 @@ html {
 .text-nav:hover {
   text-decoration: line-through;
 }
+
+.links-container-active {
+  border: 1px solid white;
+  /* background-color: "white"; */
+  padding-right: 1rem;
+}
+
+.links-container {
+  padding-right: 1rem;
+}

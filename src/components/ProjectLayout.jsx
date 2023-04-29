@@ -120,10 +120,9 @@ function ProjectLayout({ data }) {
           <Button
             variant="transparent"
             className="text-nav links-out"
-            // leftIcon={<IconBrandGithub size="1rem" />}
             style={{
               marginTop: "1rem",
-              marginBottom: "2rem",
+              marginBottom: "0.500rem",
               marginLeft: "2rem",
               marginRight: "2rem",
               color: dark ? "white" : "black",
@@ -145,13 +144,51 @@ function ProjectLayout({ data }) {
             leftIcon={<IconBrandGithub size="1rem" />}
             style={{
               marginTop: "1rem",
-              marginBottom: "2rem",
+              marginBottom: "0.500rem",
               marginLeft: "2rem",
               marginRight: "2rem",
             }}
             fullWidth
           >
             View Github Repository
+          </Button>
+        </Center>
+      )}
+
+      {data.projectSpecs === "" ? (
+        <Center style={{ marginTop: "auto" }}>
+          <Button
+            variant="transparent"
+            className="text-nav links-out"
+            style={{
+              marginBottom: "2rem",
+              marginLeft: "2rem",
+              marginRight: "2rem",
+              color: dark ? "white" : "black",
+              background: "transparent",
+            }}
+            fullWidth
+            disabled
+          >
+            <Text c="dimmed">No Project Specifications Available</Text>
+          </Button>
+        </Center>
+      ) : (
+        <Center>
+          <Button
+            variant="outline"
+            color={dark ? "gray" : "dark"}
+            className="text-nav links-out"
+            onClick={() => window.open(data.projectSpecs, "_blank")}
+            leftIcon={<IconLayersLinked size="1rem" />}
+            style={{
+              marginBottom: "2rem",
+              marginLeft: "2rem",
+              marginRight: "2rem",
+            }}
+            fullWidth
+          >
+            View Project Specifications
           </Button>
         </Center>
       )}

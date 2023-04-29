@@ -21,8 +21,6 @@ function Projects({ projects }) {
   const { width } = useViewportSize();
   const isMobileView = width <= 800;
 
-  console.log(works);
-
   return (
     <div
       ref={projects}

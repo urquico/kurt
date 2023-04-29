@@ -48,6 +48,7 @@ function Introduction({ introduction }) {
           mixBlendMode: "difference",
           borderRadius: "100%",
           pointerEvents: "none",
+          zIndex: "1",
         }}
       ></div>
       <div
