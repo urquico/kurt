@@ -57,6 +57,14 @@ function DarkMode() {
           {dark ? <IconBulb size={18} /> : <IconBulbOff size={18} />}
         </ActionIcon>
       </Tooltip>
+
+      {isHidden ? (
+        <>
+          <div style={{ width: "100vw", height: "6.500vh" }}></div>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 }

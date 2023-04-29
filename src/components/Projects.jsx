@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useMantineColorScheme, Loader } from "@mantine/core";
-import { useIntersection } from "@mantine/hooks";
+import { useIntersection, useViewportSize } from "@mantine/hooks";
 
 import ProjectLayout from "./ProjectLayout";
 
@@ -18,6 +18,9 @@ function Projects({ projects }) {
     threshold: 1,
   });
 
+  const { width } = useViewportSize();
+  const isMobileView = width <= 800;
+
   console.log(works);
 
   return (
@@ -33,25 +36,42 @@ function Projects({ projects }) {
     >
       <div ref={ref} style={{ margin: "auto" }}>
         {entry?.isIntersecting ? (
-          <Carousel
-            maw={1000}
-            mx="auto"
-            withIndicators
-            height={"auto"}
-            slideSize="33.333333%"
-            slideGap="md"
-            loop
-            align="start"
-          >
-            {works?.map((work) => {
-              return (
-                <Carousel.Slide key={work}>
-                  <ProjectLayout data={work} />
-                </Carousel.Slide>
-              );
-            })}
-            {/* ...other slides */}
-          </Carousel>
+          isMobileView ? (
+            <Carousel
+              maw={400}
+              mx={"auto"}
+              withIndicators
+              height={500}
+              slideSize="70%"
+              slideGap="md"
+            >
+              {works?.map((work) => {
+                return (
+                  <Carousel.Slide key={work} size="100%">
+                    <ProjectLayout data={work} />
+                  </Carousel.Slide>
+                );
+              })}
+            </Carousel>
+          ) : (
+            <Carousel
+              maw={1000}
+              mx="auto"
+              withIndicators
+              height={"auto"}
+              slideSize="33.333333%"
+              slideGap="md"
+              dragFree
+            >
+              {works?.map((work) => {
+                return (
+                  <Carousel.Slide key={work}>
+                    <ProjectLayout data={work} />
+                  </Carousel.Slide>
+                );
+              })}
+            </Carousel>
+          )
         ) : (
           <Loader color="dark" />
         )}

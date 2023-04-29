@@ -42,7 +42,7 @@ function App() {
               display: "flex",
               placeContent: "center",
               justifyContent: "space-evenly",
-              marginTop: "1rem",
+              // marginTop: "1rem",
             }}
           >
             <div style={{}}>

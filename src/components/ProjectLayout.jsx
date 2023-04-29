@@ -10,21 +10,25 @@ import {
 } from "@mantine/core";
 import { TypeAnimation } from "react-type-animation";
 
+import { useViewportSize } from "@mantine/hooks";
+
 import { IconBrandGithub, IconLayersLinked } from "@tabler/icons-react";
 
 function ProjectLayout({ data }) {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
-  console.log(data);
+  const { width } = useViewportSize();
+  const isMobileView = width <= 800;
 
   return (
     <Paper
       style={{
-        width: "27vw",
+        width: isMobileView ? "" : "27vw",
         height: "auto",
         background: dark ? "#121212" : "#f7f2f2",
         minHeight: "70vh",
+        marginTop: "4rem",
       }}
       shadow="xs"
       p="md"
@@ -32,27 +36,45 @@ function ProjectLayout({ data }) {
       <Text
         color={dark ? "gray" : "dark"}
         ta="center"
-        className="text-nav"
-        onClick={() => window.open(data.link, "_blank")}
+        className={data.link === "" ? "" : "text-nav"}
+        onClick={data.link === "" ? "" : () => window.open(data.link, "_blank")}
         fw="bold"
         style={{ marginTop: "1rem", marginBottom: "1.500rem" }}
       >
-        {data.title} <IconLayersLinked size="1rem" />
+        {data.title} {data.link === "" ? "" : <IconLayersLinked size="1rem" />}
       </Text>
 
-      <Image
-        src={data.thumbnail}
-        maw={200}
-        mx="auto"
-        radius="md"
-        style={{ marginTop: "1rem" }}
-      ></Image>
+      {data.thumbnail === "" ? (
+        <div
+          style={{
+            width: "80%",
+            height: "5rem",
+            background: "#1B1B1B",
+            margin: "auto",
+            borderRadius: "10px",
+          }}
+        ></div>
+      ) : (
+        <Image
+          src={data.thumbnail}
+          maw={265}
+          mx="auto"
+          radius="md"
+          style={{ marginTop: "1rem" }}
+        ></Image>
+      )}
+
       <Text
         color={dark ? "gray" : "dark"}
-        style={{ marginTop: "0.100rem", padding: "2rem", paddingBottom: "0" }}
+        style={{
+          marginTop: "0.100rem",
+          padding: "2rem",
+          paddingBottom: "0",
+          paddingTop: "1rem",
+        }}
         fz="sm"
         c="dimmed"
-        ta="left"
+        ta="justify"
         tt="lowercase"
       >
         <TypeAnimation
@@ -65,7 +87,7 @@ function ProjectLayout({ data }) {
         />
       </Text>
 
-      <div style={{ marginLeft: "1.90rem" }}>
+      <div style={{ marginLeft: "1.90rem", marginTop: "0.500rem" }}>
         {data.tech.map((tech) => {
           return (
             <Badge
@@ -80,8 +102,39 @@ function ProjectLayout({ data }) {
         })}
       </div>
 
+      <div>
+        <Badge
+          style={{
+            marginLeft: "1.90rem",
+            marginTop: "0.500rem",
+            backgroundColor: data.status === "on-going" ? "red" : "green",
+            color: "white",
+          }}
+        >
+          {data.status}
+        </Badge>
+      </div>
+
       {data.githubLink === "" ? (
-        ""
+        <Center style={{ marginTop: "auto" }}>
+          <Button
+            variant="transparent"
+            className="text-nav links-out"
+            // leftIcon={<IconBrandGithub size="1rem" />}
+            style={{
+              marginTop: "1rem",
+              marginBottom: "2rem",
+              marginLeft: "2rem",
+              marginRight: "2rem",
+              color: dark ? "white" : "black",
+              background: "transparent",
+            }}
+            fullWidth
+            disabled
+          >
+            <Text c="dimmed">No Github Repository</Text>
+          </Button>
+        </Center>
       ) : (
         <Center>
           <Button
@@ -91,8 +144,8 @@ function ProjectLayout({ data }) {
             onClick={() => window.open(data.githubLink, "_blank")}
             leftIcon={<IconBrandGithub size="1rem" />}
             style={{
-              marginTop: "2.200rem",
-              marginBottom: "1rem",
+              marginTop: "1rem",
+              marginBottom: "2rem",
               marginLeft: "2rem",
               marginRight: "2rem",
             }}
