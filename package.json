@@ -11,10 +11,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.10.6",
     "@mantine/carousel": "^6.0.9",
     "@mantine/core": "^6.0.9",
     "@mantine/hooks": "^6.0.9",
+    "@mantine/notifications": "^6.0.9",
     "@tabler/icons-react": "^2.17.0",
     "embla-carousel-react": "^7.1.0",
     "framer-motion": "^10.12.4",

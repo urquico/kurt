@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
+
 // import { useFavicon } from "@mantine/hooks";
 
 import Introduction from "./components/Introduction";
@@ -81,6 +83,8 @@ function App() {
           ...colorScheme,
         }}
       >
+        <Notifications />
+
         <div
           style={{
             position: "fixed",
@@ -128,14 +132,14 @@ function App() {
               >
                 <ScrollButton targetRef={skills} label={"Tech Stacks"} />
               </div>
-              {/* <div
+              <div
                 onClick={contactsLink}
                 className={
                   isContacts ? "links-container-active" : "links-container"
                 }
               >
                 <ScrollButton targetRef={contacts} label={"Contacts"} />
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
@@ -144,7 +148,7 @@ function App() {
         <About about={about} />
         <Projects projects={projects} />
         <Skills skills={skills} />
-        {/* <Contacts contacts={contacts} /> */}
+        <Contacts contacts={contacts} />
       </MantineProvider>
     </ColorSchemeProvider>
   );
