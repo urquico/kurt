@@ -130,7 +130,7 @@ function Introduction({ introduction }) {
                 onClick={() => window.open("https://read.cv/urquico", "_blank")}
                 leftIcon={<IconLayersLinked size="1rem" />}
               >
-                Resume
+                View CV
               </Button>
               <Button
                 variant="subtle"

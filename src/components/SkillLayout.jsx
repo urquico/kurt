@@ -1,7 +1,13 @@
-import { Text, Center, useMantineColorScheme, Paper } from "@mantine/core";
+import {
+  Text,
+  Center,
+  useMantineColorScheme,
+  Paper,
+  Tooltip,
+} from "@mantine/core";
 import { TypeAnimation } from "react-type-animation";
 
-function SkillLayout({ label }) {
+function SkillLayout({ label, type }) {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
@@ -31,33 +37,36 @@ function SkillLayout({ label }) {
   const shuffledString = generateShuffledString(label);
 
   return (
-    <Paper
-      shadow="xs"
-      p="md"
-      style={{
-        background: dark ? "#1B1B1B" : "white",
-        color: dark ? "white" : "black",
-      }}
-    >
-      <Center>
-        <Text c="dimmed">
-          <TypeAnimation
-            style={{
-              whiteSpace: "pre-line",
-            }}
-            sequence={[
-              `$ ${randomString}`,
-              1000,
-              `$ ${shuffledString}`,
-              1000,
-              `$ ${label}`,
-            ]}
-            speed={50}
-            cursor={false}
-          />
-        </Text>
-      </Center>
-    </Paper>
+    <Tooltip label={type}>
+      <Paper
+        shadow="xs"
+        p="md"
+        style={{
+          background: dark ? "#1B1B1B" : "white",
+          color: dark ? "white" : "black",
+          cursor: "context-menu",
+        }}
+      >
+        <Center>
+          <Text c="dimmed">
+            <TypeAnimation
+              style={{
+                whiteSpace: "pre-line",
+              }}
+              sequence={[
+                `${randomString}`,
+                1000,
+                `${shuffledString}`,
+                1000,
+                `${label}`,
+              ]}
+              speed={50}
+              cursor={false}
+            />
+          </Text>
+        </Center>
+      </Paper>
+    </Tooltip>
   );
 }
 

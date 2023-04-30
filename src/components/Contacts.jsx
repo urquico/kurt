@@ -90,7 +90,7 @@ function Contacts({ contacts }) {
           c="dimmed"
           style={{ marginTop: "1rem", marginBottom: "2rem" }}
         >
-          Any question of remarks? Just write me a message!
+          Any question or remarks? Just write me a message!
         </Text>
         <Paper
           style={{

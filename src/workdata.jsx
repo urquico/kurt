@@ -100,20 +100,56 @@ export const photo = [
 ];
 
 export const skillsData = [
-  { label: "React JS" },
-  { label: "Node JS" },
-  { label: "Express JS" },
-  { label: "Firebase" },
-  { label: "MySQL" },
-  { label: "Electron" },
-  { label: "Vite" },
-  { label: "Mantine UI" },
-  { label: "REST" },
-  { label: "C, C++" },
-  { label: "HTML | CSS" },
-  { label: "Python" },
-  { label: "Java" },
-  { label: "HTML" },
-  { label: "CSS" },
-  { label: "JavaScript" },
+  {
+    label: "React",
+    type: "A JavaScript library for building user interfaces.",
+  },
+  {
+    label: "Vite",
+    type: "Fast build tool for modern web apps.",
+  },
+  {
+    label: "Electron",
+    type: "Build desktop apps with web technologies",
+  },
+  {
+    label: "Mantine UI",
+    type: "Modern React components library for rapid UI development.",
+  },
+
+  {
+    label: "Node JS",
+    type: "JavaScript runtime environment for server-side",
+  },
+  {
+    label: "Express JS",
+    type: "Fast and minimalist web framework for Node.",
+  },
+
+  {
+    label: "MySQL",
+    type: "Relational database management system.",
+  },
+  {
+    label: "Firebase",
+    type: "Realtime database and app development platform.",
+  },
+
+  {
+    label: "Git",
+    type: "Version control system for collaborative code development.",
+  },
+  { label: "RESTful APIs", type: "Standardized interface for web services." },
+
+  { label: "HTML", type: "Markup language for web page structure." },
+  { label: "CSS", type: "Styling for web pages and apps." },
+  { label: "JavaScript", type: "Scripting language for web development." },
+  { label: "C", type: "Used for procedural programming" },
+  { label: "Python", type: "Used for general programming" },
+  { label: "C++", type: "Used for procedural programming" },
+  {
+    label: "C#",
+    type: "Used for procedural programming and object-oriented programming",
+  },
+  { label: "Java", type: "Used for object-oriented programming" },
 ];

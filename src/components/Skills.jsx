@@ -4,6 +4,7 @@ import {
   Loader,
   SimpleGrid,
   ScrollArea,
+  Text,
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 
@@ -35,7 +36,18 @@ function Skills({ skills }) {
       <div ref={ref} style={{ margin: "auto" }}>
         {entry?.isIntersecting ? (
           <>
-            <ScrollArea h={250}>
+            <Text
+              ta="center"
+              style={{
+                fontSize: "1.400rem",
+                marginBottom: "2rem",
+                marginTop: "2rem",
+              }}
+              fw="bold"
+            >
+              Technical Knowledge
+            </Text>
+            <ScrollArea h={400}>
               <SimpleGrid
                 cols={4}
                 spacing="xs"
@@ -48,7 +60,7 @@ function Skills({ skills }) {
                 {skillsData.map((skill) => {
                   return (
                     <div key={skill}>
-                      <SkillLayout label={skill.label} />
+                      <SkillLayout label={skill.label} type={skill.type} />
                     </div>
                   );
                 })}
