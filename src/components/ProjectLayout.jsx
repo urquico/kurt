@@ -26,7 +26,7 @@ function ProjectLayout({ data }) {
       style={{
         width: isMobileView ? "" : "27vw",
         height: "auto",
-        background: dark ? "#121212" : "#f7f2f2",
+        background: dark ? "#121212" : "white",
         minHeight: "70vh",
         marginTop: "4rem",
       }}
