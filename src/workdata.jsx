@@ -5,18 +5,18 @@ import loveWillTearUsApart from "../src/assets/loveWillTearUsApart.mp3";
 import allApologies from "../src/assets/allApologies.mp3";
 
 export const works = [
-  // {
-  //   link: "",
-  //   thumbnail: "",
-  //   title: "One Man Merchandising System",
-  //   description:
-  //     "A Desktop Application for one man \nmerchandising located at Scout De Guia, Quezon City",
-  //   tech: ["React", "Vite", "Electron", "Zustand", "Node", "REST", "MySQL"],
-  //   githubLink: "",
-  //   speed: 50,
-  //   status: "on-going",
-  //   projectSpecs: "https://read.cv/urquico/YmlSFfybOhxeV8J4mWg7",
-  // },
+  {
+    link: "",
+    thumbnail: "",
+    title: "One Man Merchandising System",
+    description:
+      "A Desktop Application for one man \nmerchandising located at Scout De Guia, Quezon City",
+    tech: ["React", "Vite", "Electron", "Zustand", "Node", "REST", "MySQL"],
+    githubLink: "",
+    speed: 50,
+    status: "on-going",
+    projectSpecs: "https://read.cv/urquico/YmlSFfybOhxeV8J4mWg7",
+  },
   {
     link: "https://haribon-e-wall.web.app/",
     thumbnail:
